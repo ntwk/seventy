@@ -16,10 +16,8 @@ makedepends=('asciidoc' 'source-highlight' 'cmake' 'pkg-config' 'perl' 'python2'
 optdepends=('perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell' 'guile')
 provides=('weechat')
 conflicts=('weechat')
-validpgpkeys=('A9AB5AB778FA5C3522FD0378F82F4B16DEC408F8') # WeeChat (signing key)
-source=(https://www.weechat.org/files/src/${_pkgname}-${pkgver}.tar.bz2{,.asc})
-md5sums=('37c0388e5cb82fd3c3d1a533a5a5695d'
-         'SKIP')
+source=(https://www.weechat.org/files/src/${_pkgname}-${pkgver}.tar.bz2)
+md5sums=('37c0388e5cb82fd3c3d1a533a5a5695d')
 
 prepare() {
   grep -rl 'weechat' ${_pkgname}-${pkgver} | xargs -L 1 sed -i 's/weechat/seventy/g'
