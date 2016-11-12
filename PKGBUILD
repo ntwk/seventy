@@ -25,6 +25,7 @@ prepare() {
   cd ${_pkgname}-${pkgver}
   patch -Np1 -i "${srcdir}/ascii-logo.patch"
 
+  grep -rl 'https\?://weechat' . | xargs -r -L 1 sed -i 's/\(https\?:\/\/\)weechat/\1example/g'
   grep -rl 'weechat' . | xargs -r -L 1 sed -i 's/weechat/seventy/g'
   grep -rl 'WeeChat' . | xargs -r -L 1 sed -i 's/WeeChat/Seventy/g'
   grep -rl 'Weechat' . | xargs -r -L 1 sed -i 's/Weechat/Seventy/g'
