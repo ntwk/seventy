@@ -1,0 +1,22 @@
+diff -aur weechat-1.6.pristine/src/core/weechat.c weechat-1.6.new/src/core/weechat.c
+--- weechat-1.6.pristine/src/core/weechat.c	2016-11-12 13:19:57.751847659 -0500
++++ weechat-1.6.new/src/core/weechat.c	2016-11-12 13:20:50.241755842 -0500
+@@ -406,11 +406,13 @@
+     {
+         gui_chat_printf (
+             NULL,
+-            "%s  ___       __         ______________        _____ \n"
+-            "%s  __ |     / /___________  ____/__  /_______ __  /_\n"
+-            "%s  __ | /| / /_  _ \\  _ \\  /    __  __ \\  __ `/  __/\n"
+-            "%s  __ |/ |/ / /  __/  __/ /___  _  / / / /_/ // /_  \n"
+-            "%s  ____/|__/  \\___/\\___/\\____/  /_/ /_/\\__,_/ \\__/  ",
++            "%s ________                       _____         \n"
++            "%s __  ___/_______   _______________  /_____  __\n"
++            "%s _____ \\_  _ \\_ | / /  _ \\_  __ \\  __/_  / / /\n"
++            "%s ____/ //  __/_ |/ //  __/  / / / /_ _  /_/ / \n"
++            "%s /____/ \\___/_____/ \\___//_/ /_/\\__/ _\\__, /  \n"
++            "%s                                     /____/   ",
++            GUI_COLOR(GUI_COLOR_CHAT_NICK),
+             GUI_COLOR(GUI_COLOR_CHAT_NICK),
+             GUI_COLOR(GUI_COLOR_CHAT_NICK),
+             GUI_COLOR(GUI_COLOR_CHAT_NICK),
